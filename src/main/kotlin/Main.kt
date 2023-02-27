@@ -122,6 +122,9 @@ fun main(args: Array<String>) {
     val newArr = arrayOf(1,2,3)
     println(newArr[0]) //1
 
+    val arrayWithCon = Array(10) {i -> i+1}
+    println(arrayWithCon[9]) //10
+
 }
 
 fun squareNums(num1: Int, num2: Int): Int {
