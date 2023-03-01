@@ -120,7 +120,7 @@ fun main() {
 //    println(totals)
 //
 //    val newArr = arrayOf(1,2,3)
-//    println(newArr[0]) //1
+//    println(newArr[0]) //1S
 //
 //    val arrayWithCon = Array(10) {i -> i+1}
 //    println(arrayWithCon[9]) //10
@@ -128,11 +128,19 @@ fun main() {
 //    val numArray2 = intArrayOf(1,3,5) // [1,3,5]
 //    val numArray3 = IntArray(5) // [0,0,0,0,0]
 //    val numArray4 = IntArray(5) {it} // [0,1,2,3,4]
+//
+//    val mutList = mutableListOf(1,2,3,4,5) // [1,2,3,4,5]
+//    mutList.add(6) // [1,2,3,4,5,6]
+//    mutList.add(0,7) // [7,1,2,3,4,5,6]
+//    mutList.remove(3) //[7,1,2,4,5,6]
+//
+//    val sets = setOf(1,2,3,4,4) // [1,2,3,4]
+//
+//    val numMap = mapOf("firstKey" to "firstVal", "secondKey" to 2)
 
-    val mutList = mutableListOf(1,2,3,4,5) // [1,2,3,4,5]
-    mutList.add(6) // [1,2,3,4,5,6]
-    mutList.add(0,7) // [7,1,2,3,4,5,6]
-    mutList.remove(3) //[7,1,2,4,5,6]
+    print("Enter Text: ")
+    val strIn = readln()
+    println("Your input was: $strIn")
 
 }
 
