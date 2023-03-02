@@ -1,3 +1,5 @@
+//import java.util.Scanner
+
 fun main() {
 //    println("Hello World!")
 //
@@ -137,10 +139,17 @@ fun main() {
 //    val sets = setOf(1,2,3,4,4) // [1,2,3,4]
 //
 //    val numMap = mapOf("firstKey" to "firstVal", "secondKey" to 2)
+//
+//    print("Enter Text: ")
+//    val strIn = readln() //Hello
+//    println("Your input was: $strIn") //Your input was: Hello
+//
+//    print("Enter text 2:")
+//    val scanner = Scanner(System.`in`)
+//    val scannedNum:Int = scanner.nextInt() //22
+//    println("Your input was: $scannedNum") //Your input was: 22
 
-    print("Enter Text: ")
-    val strIn = readln()
-    println("Your input was: $strIn")
+
 
 }
 
