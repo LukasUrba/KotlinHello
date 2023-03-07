@@ -1,3 +1,5 @@
+//import java.lang.ArithmeticException
+import kotlin.ArithmeticException
 //import java.util.Scanner
 
 fun main() {
@@ -149,8 +151,24 @@ fun main() {
 //    val scannedNum:Int = scanner.nextInt() //22
 //    println("Your input was: $scannedNum") //Your input was: 22
 
+    val firstNum = 20
+    val secondNum = 0
+    try {
+        divideByZero(firstNum,secondNum)
+    } catch (e : ArithmeticException) {
+        println("${e.localizedMessage}, division error")
+    } finally {
+        println("This will always print")
+    }
 
-
+}
+@Throws(ArithmeticException::class)
+fun divideByZero(numA: Int, numB: Int): Int {
+    return if (numB == 0) {
+        throw ArithmeticException("Can't divide $numA by $numB") //Custom exception
+    } else {
+        numA/numB
+    }
 }
 
 //fun squareNums(num1: Int, num2: Int): Int {
