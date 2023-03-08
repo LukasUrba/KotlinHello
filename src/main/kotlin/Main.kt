@@ -150,26 +150,45 @@ fun main() {
 //    val scanner = Scanner(System.`in`)
 //    val scannedNum:Int = scanner.nextInt() //22
 //    println("Your input was: $scannedNum") //Your input was: 22
+//
+//    val firstNum = 20
+//    val secondNum = 0
+//    try {
+//        divideByZero(firstNum,secondNum)
+//    } catch (e : ArithmeticException) {
+//        println("${e.localizedMessage}, division error")
+//    } finally {
+//        println("This will always print")
+//    }
+//
+    val person1 = PersonClassDemo("Gareth","Davis", 25)
 
-    val firstNum = 20
-    val secondNum = 0
-    try {
-        divideByZero(firstNum,secondNum)
-    } catch (e : ArithmeticException) {
-        println("${e.localizedMessage}, division error")
-    } finally {
-        println("This will always print")
+    println("Person's first name: ${person1.name} and their age: ${person1.age}")
+}
+
+class PersonClassDemo(var name: String, val age: Int) {
+    init {
+        println("All values are initialised")
     }
 
-}
-@Throws(ArithmeticException::class)
-fun divideByZero(numA: Int, numB: Int): Int {
-    return if (numB == 0) {
-        throw ArithmeticException("Can't divide $numA by $numB") //Custom exception
-    } else {
-        numA/numB
+    constructor(name2: String, name3: String = "", number: Int) :this(name2,number){
+        name = name2
+        println(name) //Gareth
+        name = name3
+        println(name) //Davis
+        println(number)
+
     }
 }
+
+//@Throws(ArithmeticException::class)
+//fun divideByZero(numA: Int, numB: Int): Int {
+//    return if (numB == 0) {
+//        throw ArithmeticException("Can't divide $numA by $numB") //Custom exception
+//    } else {
+//        numA/numB
+//    }
+//}
 
 //fun squareNums(num1: Int, num2: Int): Int {
 //    return num1 * num2
@@ -194,3 +213,4 @@ fun divideByZero(numA: Int, numB: Int): Int {
 //
 //    return total
 //}
+
