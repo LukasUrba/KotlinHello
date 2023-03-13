@@ -1,5 +1,5 @@
 //import java.lang.ArithmeticException
-import kotlin.ArithmeticException
+//import kotlin.ArithmeticException
 //import java.util.Scanner
 
 fun main() {
@@ -161,25 +161,76 @@ fun main() {
 //        println("This will always print")
 //    }
 //
-    val person1 = PersonClassDemo("Gareth","Davis", 25)
+//    val person1 = PersonClassDemo("Gareth", 25)
+//
+//    val dog1 = Dog("Husky")
+//
+//    dog1.makeNoise()
+//    println("Person's first name: ${person1.name} and their age: ${person1.age}")
 
-    println("Person's first name: ${person1.name} and their age: ${person1.age}")
+    val bike1 = Motorbike("Kawasaki")
+    val car1 = Car("Toyota")
+
+    println(bike1.wheels)
+}
+//
+//open class Animal() {
+//    init {
+//        println("Animal superclass has been reached")
+//    }
+//    open fun makeNoise() {
+//        println("???")
+//    }
+//}
+//
+//class Dog(val breed : String): Animal() {
+//    override fun makeNoise() {
+//        println("Woof")
+//    }
+//}
+
+//abstract class Vehicle(val wheels: Int) {
+//    abstract fun showNumWheels(wheels: Int)
+//}
+
+interface VehicleInt {
+    val wheels: Int
+    fun showNumWheels()
 }
 
-class PersonClassDemo(var name: String, val age: Int) {
-    init {
-        println("All values are initialised")
-    }
-
-    constructor(name2: String, name3: String = "", number: Int) :this(name2,number){
-        name = name2
-        println(name) //Gareth
-        name = name3
-        println(name) //Davis
-        println(number)
-
+class Motorbike(private val brand: String): VehicleInt {
+    override var wheels: Int = 2
+        get() {
+            return field + 2
+        }
+        set(wheels) {
+            field = wheels + 2
+        }
+    override fun showNumWheels() {
+        println("A $brand motorbike has $wheels wheels")
     }
 }
+
+class Car(private val brand: String): VehicleInt {
+    override val wheels: Int = 4
+    override fun showNumWheels() {
+        println("A $brand car has $wheels wheels")
+    }
+}
+
+//class PersonClassDemo(var name: String, val age: Int) {
+//    init {
+//        println("All values are initialised")
+//    }
+//
+//    constructor(name2: String, name3: String = "", number: Int) :this(name2,number){
+//        name = name2
+//        println(name) //Gareth
+//        name = name3
+//        println(name) //Davis
+//        println(number)
+//    }
+//}
 
 //@Throws(ArithmeticException::class)
 //fun divideByZero(numA: Int, numB: Int): Int {
